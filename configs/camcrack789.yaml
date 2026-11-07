@@ -1,0 +1,12 @@
+dataset_name: camcrack789
+dataset_root: data/CamCrack789
+model_name: lbas
+output_dir: outputs/camcrack789_lbas
+device: cuda:0
+batch_size: 16
+epochs: 100
+learning_rate: 0.001
+seed: 2026
+input_size: 512
+num_workers: 4
+validation_interval: 10

@@ -1,0 +1,4 @@
+# License scope and publication hold
+The rights holder has selected MIT for PaveCrackNet original contributions they are authorized to license. The exact copyright-holder name has not yet been provided, so no completed project LICENSE is asserted. A standard MIT draft is kept privately, not in the public index.
+Inherited RHACrackNet code retains its original MIT notice in third_party/RHACrackNet_LICENSE. Do not attribute inherited implementation to PaveCrackNet.
+The bundled dyrelu.py exactly matches Islanna/DynamicReLU at commit c9326bd2c134793264d2f5d398c78a78783e00bd. No explicit upstream license was found. Its redistribution status is LICENSE_UNRESOLVED and blocks release of this source-dependent model. The file is retained locally without mathematical changes; its presence is not permission to publish it. See THIRD_PARTY_NOTICES.md. No public release is authorized or completed.

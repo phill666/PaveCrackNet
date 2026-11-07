@@ -1,0 +1,8 @@
+# Dataset preparation
+No images, labels, archives or weights are distributed. Do not re-split.
+
+* TUT: retain the provided fixed folders train_img/train_lab, val_img/val_lab, test_img/test_lab (987/139/282). An independently certified official split and download URL are not established in the release evidence. Obtain the data from its rights holder; do not assume a similarly named dataset is identical.
+* CamCrack789: custom seed-2026 437/109 split from the provided 546 training images; the 243 provided validation images serve as Test. Place the original fixed train_seed2026.txt, val_seed2026.txt, test_provided_valid.txt in dataset_root/splits. Each line is relative_image_path|relative_mask_path. Metadata redistribution permission is unconfirmed, so these lists are not bundled. Obtain the exact original lists, do not regenerate a random split.
+* PY-CrackDB: https://doi.org/10.5281/zenodo.16749554 ; local download record identifies CC-BY-4.0. Attribute PY-CrackDB, record 16749554, version as supplied at the DOI. Seed-2026 grouped/stratified split 258/55/56, 369 annotated pairs / 304 unique original images. Copy bundled splits/pycrackdb/*.txt to dataset_root/splits. Lines are tab-separated relative image and mask paths.
+
+RGB images: bilinear resize to 512 square and float32 /255. TUT masks: grayscale, nearest resize, >0. Cam/PY: PIL convert('1'), nearest resize, binary float32. Training transforms are synchronized H/V/180-degree flips, each p=.5, and image-only brightness x1.5, brightness x.5, contrast x1.5, each independently p=.5. Validation/Test transforms are disabled. TUT content-level leakage has not been fully excluded. Exact-image grouping does not establish independence of every unrecognized same-scene acquisition.
