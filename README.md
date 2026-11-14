@@ -2,7 +2,7 @@
 
 Context-Selective Semantic Guidance and Lightweight Boundary-Aware Supervision for Real-Time Pavement Crack Segmentation
 
-PyTorch source preparation for the manuscript **PaveCrackNet: Context-Selective Semantic Guidance and Lightweight Boundary-Aware Supervision for Real-Time Pavement Crack Segmentation** (target journal IJPE; publication/acceptance not claimed).
+PyTorch source for the manuscript **PaveCrackNet: Context-Selective Semantic Guidance and Lightweight Boundary-Aware Supervision for Real-Time Pavement Crack Segmentation**. Manuscript prepared for submission to Construction and Building Materials; publication or acceptance is not claimed.
 
 ## Introduction and highlights
 A lightweight pavement crack segmenter with CSSG spatial feature modulation and LBAS auxiliary boundary supervision. Deployment exports omit the auxiliary boundary head. Performance is dataset-dependent, with limitations on PY-CrackDB; no claim of universal best performance is made.
@@ -29,7 +29,7 @@ See [TRAINING](docs/TRAINING.md); edit configs/*.yaml, then `python scripts/trai
 See [EVALUATION](docs/EVALUATION.md). Checkpoints are required and not bundled. Single-image/folder prediction, threshold override, CPU/CUDA, overlays and quantitative evaluation are provided as statically checked wrappers only.
 
 ## Experimental results
-The reported final PaveCrackNet F1 values are TUT **80.91%**, CamCrack789 **81.16%**, PY-CrackDB **56.48%** (historical locked records, not rerun for this release). LBAS does not consistently improve PY-CrackDB relative to CSSG-only.
+The current manuscript reports PaveCrackNet F1 values of TUT **81.32%**, CamCrack789 **81.16%**, and PY-CrackDB **58.56%**. No experiments were rerun for this documentation update; historical experiment records remain unchanged. Performance is dataset- and seed-dependent.
 
 ## Model complexity
 Deployment approximately **0.59M parameters**, **8.20G counted FLOPs**, **105.06 FPS**. FPS is pure network forward speed on RTX4090, FP32, batch1, 512square; not end-to-end on-vehicle latency. MAC counting uses 2FLOPs/MAC and does not cover every runtime operator.
@@ -45,4 +45,4 @@ The inherited RHACrackNet baseline is based on the implementation accompanying *
 
 ## License
 MIT has been selected for authorized PaveCrackNet original contributions; the final copyright-holder line is pending confirmation. Inherited RHACrackNet portions retain their original MIT license. Other components retain their respective terms; see [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) and [LICENSE_STATUS](LICENSE_STATUS.md).
-This local release candidate still contains a required DyReLU implementation with unresolved upstream permission. It must not be publicly distributed until that permission is resolved. No assertion that all bundled code is authorized is made. No public repository has been created by this preparation.
+This public repository contains a required DyReLU implementation with **LICENSE_UNRESOLVED** status: no explicit upstream redistribution license has been verified. Public availability does not establish redistribution permission, and this documentation update does not resolve that limitation. See [LICENSE_STATUS](LICENSE_STATUS.md) for the recommended action.
